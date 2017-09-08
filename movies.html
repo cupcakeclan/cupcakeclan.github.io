@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<title>Favorite Movies</title>
+	<style>
+		body {
+			font-family: 'Pacifico';
+			background: #333;
+		}
+		.container {
+			margin: 50px auto;
+			text-align: center;
+		}
+		.title {
+			color: #FFF;
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
+		.trailer {
+			margin-bottom: 50px;
+		}
+		.movie {
+			display: inline-block;
+		}
+		.movie-img {
+			background-size: 100%;
+			width: 200px;
+			height: 400px;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			transition: 0.8s;
+		}
+		.movie1 {
+			background-image: url('images/beckham.jpg');
+		}
+		.movie2 {
+			background-image: url('images/zootopia.jpg');
+		}
+		.movie3 {
+			background-image: url('images/dory.jpg');
+		}
+		.movie4 {
+			background-image: url('images/love_actually.jpg');
+		}
+		.movie5 {
+			background-image: url('images/home_alone.jpg');
+		}
+		a {
+			color: #FFF;
+			margin: 10px
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		$( document ).ready(function() {
+		   $(".movie-img").hover(function() {
+		   		$(this).width(300);
+		   }, function() {
+		   		$(this).width(200);
+		   })
+
+		   $(".movie1").click(function() {
+		   		$(".trailer").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/XsmbObwStSQ" frameborder="0" allowfullscreen></iframe>')
+		   })
+		   $(".movie2").click(function() {
+		   		$(".trailer").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/jWM0ct-OLsM" frameborder="0" allowfullscreen></iframe>')
+		   })
+		   $(".movie3").click(function() {
+		   		$(".trailer").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/UGWv91YZua4" frameborder="0" allowfullscreen></iframe>')
+		   })
+		   $(".movie4").click(function() {
+		   		$(".trailer").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/KdzH6a-XEGM" frameborder="0" allowfullscreen></iframe>')
+		   })
+		   $(".movie5").click(function() {
+		   		$(".trailer").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/CK2Btk6Ybm0" frameborder="0" allowfullscreen></iframe>')
+		   })
+		})
+	</script>
+	<a href="index.html">< Back</a>
+	<div class="container">
+		<div class="title">Our Favorite Movies</div>
+		<div class="trailer"></div>
+		<div class="movie">
+			<div class="movie-img movie1"></div>
+		</div>
+		<div class="movie">
+			<div class="movie-img movie2"></div>
+		</div>
+		<div class="movie">
+			<div class="movie-img movie3"></div>
+		</div>
+		<div class="movie">
+			<div class="movie-img movie4"></div>
+		</div>
+		<div class="movie">
+			<div class="movie-img movie5"></div>
+		</div>
+	</div>
+</body>
+</html>
